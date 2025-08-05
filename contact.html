@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>Contact Us | Aesthetic Steel Detailing Service</title>
+  <meta name="description" content="Get in touch with Aesthetic Steel Detailing Service to discuss your project requirements. We're ready to help with your steel detailing needs.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- JavaScript -->
+  <script src="js/main.js" defer></script>
+  <style>
+    /* Additional Styles for Contact Page */
+    .contact-form-section {
+      background-color: var(--white);
+      padding: 80px 0;
+    }
+    
+    .contact-form-container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    
+    @media (min-width: 768px) {
+      .contact-form-container {
+        flex-direction: row;
+      }
+    }
+    
+    .contact-form-column {
+      flex: 1;
+    }
+    
+    .contact-form {
+      background-color: var(--white);
+      padding: 30px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--secondary);
+      font-weight: 500;
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid var(--light-gray);
+      border-radius: var(--radius-md);
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      background-color: var(--white);
+    }
+    
+    .form-control:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(43, 76, 126, 0.1);
+      outline: none;
+    }
+    
+    .form-control.error {
+      border-color: var(--destructive);
+    }
+    
+    .error-message {
+      color: #e53935;
+      font-size: 0.875rem;
+      margin-top: 5px;
+    }
+    
+    .btn-submit {
+      background-color: var(--primary);
+      color: var(--white);
+      border: none;
+      padding: 12px 25px;
+      border-radius: var(--radius-md);
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .btn-submit:hover {
+      background-color: var(--primary-dark);
+    }
+    
+    .btn-submit:disabled {
+      background-color: var(--gray);
+      cursor: not-allowed;
+    }
+    
+    .success-message {
+      text-align: center;
+      padding: 30px;
+    }
+    
+    .success-message i {
+      font-size: 4rem;
+      color: #4caf50;
+      margin-bottom: 20px;
+    }
+    
+    .success-message h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    
+    .contact-info-box {
+      background-color: var(--light);
+      padding: 30px;
+      border-radius: var(--radius-md);
+      height: 100%;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 25px;
+    }
+    
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background-color: rgba(43, 76, 126, 0.1);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      flex-shrink: 0;
+    }
+    
+    .contact-icon i {
+      font-size: 1.25rem;
+      color: var(--primary);
+    }
+    
+    .contact-text h4 {
+      font-size: 1.125rem;
+      margin-bottom: 5px;
+    }
+    
+    .contact-social {
+      margin-top: 30px;
+    }
+    
+    .contact-social h4 {
+      font-size: 1.125rem;
+      margin-bottom: 15px;
+    }
+    
+    .map-section {
+      padding: 80px 0;
+      background-color: var(--light);
+    }
+    
+    .map-container {
+      height: 400px;
+      background-color: #e5e5e5;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    
+    .map-placeholder {
+      text-align: center;
+    }
+    
+    .map-placeholder i {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/logo.jpg" alt="AestheticDetailing Logo" class="logo-img">
+            <span class="logo-text">AestheticDetailing</span>
+          </a>
+        </div>
+        
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="projects.html">Projects</a>
+          <a href="customer-service.html">Customer Service</a>
+          <a href="contact.html" class="active">Contact</a>
+        </nav>
+        
+        <!-- Mobile Navigation Toggle -->
+        <button class="mobile-nav-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      
+      <!-- Mobile Navigation Menu -->
+      <div class="mobile-nav-menu">
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="projects.html">Projects</a>
+          <a href="customer-service.html">Customer Service</a>
+          <a href="contact.html" class="active">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <!-- Hero Section -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="hero-content text-center">
+          <h1>Get in Touch</h1>
+          <p>Contact us to discuss your steel detailing requirements</p>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Contact Us</h2>
+          <div class="section-divider"></div>
+          <p class="section-description">
+            Contact us to discuss your steel detailing requirements. We're ready to help with your project, big or small.
+          </p>
+        </div>
+        
+        <div class="contact-form-container">
+          <div class="contact-form-column">
+            <form id="contactForm" class="contact-form">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" class="form-control" placeholder="Your Name">
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="form-control" placeholder="Your Email">
+              </div>
+              
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" class="form-control" placeholder="Your Phone Number">
+              </div>
+              
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" class="form-control" placeholder="Subject">
+              </div>
+              
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" class="form-control" rows="5" placeholder="Your Message"></textarea>
+              </div>
+              
+              <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+          </div>
+          
+          <div class="contact-form-column">
+            <div class="contact-info-box">
+              <h3>Contact Information</h3>
+              
+              <div class="contact-items-container">
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="contact-text">
+                    <h4>Our Location</h4>
+                    <p>180, perumal Kovil Street, G.R.pattinam, Olaippadi (po), kunnam(tk), Perambalur, Tamil Nadu</p>
+                  </div>
+                </div>
+                
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="contact-text">
+                    <h4>Email Us</h4>
+                    <p>aestheticsteeldetailing@gmail.com</p>
+                  </div>
+                </div>
+                
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                  <div class="contact-text">
+                    <h4>Call Us</h4>
+                    <p>+91 8270837064</p>
+                  </div>
+                </div>
+                
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fas fa-clock"></i>
+                  </div>
+                  <div class="contact-text">
+                    <h4>Working Hours</h4>
+                    <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="contact-social">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                  <a href="https://www.linkedin.com/company/aestheticsteeldetailing/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="https://www.facebook.com/share/16FThTySGF/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://x.com/Aesthtic0606?t=QRv0NAHwk6m3Xz7oQKl5Mw&s=08" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                  <a href="https://www.instagram.com/aesthetic_steeldetailing?igsh=MXNpdGRlcG8wanNucw==" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Map Section -->
+   <section class="map-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Our Location</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="map-container" style="border-radius: 12px; overflow: hidden;">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15681.514046310297!2d79.133444!3d11.021324!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a54b5f99b2eecdd%3A0x0!2zNjLCqkNDK1cyNywgS3VubmFtLCBUYXB1IGRpc3RyaWN0LCBUYW1pbCBOYWR1IDYyMTcwOA!5e0!3m2!1sen!2sin!4v1717673019284!5m2!1sen!2sin"
+        width="100%"
+        height="400"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>AestheticSteel</h3>
+          <p>Professional steel detailing services combining structural integrity with visual appeal.</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/company/aestheticsteeldetailing/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/share/16FThTySGF/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/Aesthtic0606?t=QRv0NAHwk6m3Xz7oQKl5Mw&s=08" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/aesthetic_steeldetailing?igsh=MXNpdGRlcG8wanNucw==" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="customer-service.html">Customer Service</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="services.html">Structural Steel Detailing</a></li>
+            <li><a href="services.html">Miscellaneous Steel Detailing</a></li>
+            <li><a href="services.html">3D Modeling & BIM</a></li>
+            <li><a href="services.html">Documentation & Reporting</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Contact Info</h3>
+          <ul class="contact-info">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>180, perumal Kovil Street, G.R.pattinam, Olaippadi (po), kunnam(tk), Perambalur, Tamil Nadu</span>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <span>aestheticsteeldetailing@gmail.com</span>
+            </li>
+            <li>
+              <i class="fas fa-phone-alt"></i>
+              <span>+91 8270837064</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Aesthetic Steel Detailing Service. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
