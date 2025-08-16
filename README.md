@@ -1,4 +1,4 @@
-This is a fully responsive and professional website developed for **[Aesthetic Detailing Services](https://aestheticdetailingservice.com/)** – a company that provides high-quality **steel detailing services** using advanced industry tools and standards.
+A professional website developed for **[Aesthetic Detailing Services](https://aestheticdetailingservice.com/)** – a company that provides high-quality **steel detailing services** using advanced industry tools and standards.
 ## 🌐 Live Site
 👉 [aestheticdetailingservice.com](https://aestheticdetailingservice.com/)
 ## 💼 Project Overview
